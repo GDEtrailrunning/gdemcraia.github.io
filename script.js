@@ -1,27 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-//actualizarDiasRestantes();
-//setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
-//Datos para el gráfico de líneas
+  //actualizarDiasRestantes();
+  //setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
+  //Datos para el gráfico de líneas
 const dataLine1 = {
-labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5', 'Día 6'], // Etiquetas de los días
-datasets: [{
-label: 'Km recorridos en Semana 46',
-data: [12, 18, 10, 15, 10, 13], // Datos de los km recorridos en cada día
-borderColor: 'rgba(75, 192, 192, 1)',
-fill: true,
-tension: 0.1
-}]
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5','Día 6'], // Etiquetas de los días
+  datasets: [{
+    label: 'Km recorridos en Semana 2',
+    data: [21, 15, 10, 18, 14, 26], // Datos de los km recorridos en cada día
+    borderColor: 'rgba(75, 192, 192, 1)',
+    fill: true,
+    tension: 0.1
+  }]
 };
 
 const dataLine2 = {
-labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5', 'Día 6'], // Etiquetas de los días
-datasets: [{
-label: 'Km recorridos en Semana 47',
-data: [11, 15, 15, 18, 11, 15], // Datos de los km recorridos en cada día
-borderColor: 'rgba(153, 102, 255, 1)',
-fill: true,
-tension: 0.1
-}]
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
+  datasets: [{
+    label: 'Km recorridos en Semana 3',
+    data: [10, 12, 7, 10, 10], // Datos de los km recorridos en cada día
+    borderColor: 'rgba(153, 102, 255, 1)',
+    fill: true,
+    tension: 0.1
+  }]
 };
 
 // Configuración del gráfico de líneas
@@ -29,26 +29,26 @@ tension: 0.1
 
 // Seleccione los contextos de los <canvas> y cree los gráficos
 const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
-type: 'line',
-data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
-options: {
-scales: {
-y: {
-   beginAtZero: true
+  type: 'line',
+  data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
   }
- }
-}
 });
 
-const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
-type: 'line',
-data: dataLine2,
-options: {
-scales: {
-    y: {
-    beginAtZero: true
+ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
+  type: 'line',
+  data: dataLine2,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
     }
-   }
   }
 });
 
