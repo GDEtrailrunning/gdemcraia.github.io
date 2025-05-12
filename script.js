@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
   //Datos para el gráfico de líneas
 const dataLine1 = {
-  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 16',
-    data: [12, 12, 16, 15], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 18',
+    data: [10, 14, 13, 12, 35], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -16,8 +16,8 @@ const dataLine1 = {
 const dataLine2 = {
   labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 17',
-    data: [12, 13, 10, 15], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 19',
+    data: [20, 20, 13, 28], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
@@ -25,10 +25,7 @@ const dataLine2 = {
 };
 
 // Configuración del gráfico de líneas
-
-
-// Seleccione los contextos de los <canvas> y cree los gráficos
-const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
+const configLine = {
   type: 'line',
   data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
   options: {
@@ -38,9 +35,11 @@ const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
       }
     }
   }
-});
+};
 
- const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
+// Seleccione los contextos de los <canvas> y cree los gráficos
+const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), configLine);
+const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   type: 'line',
   data: dataLine2,
   options: {
@@ -108,7 +107,7 @@ function actualizarDiasRestantes() {
   document.getElementById("Semana 1").appendChild(video2);
   document.getElementById("Semana 2").appendChild(video3);
   document.getElementById("Semana 2").appendChild(video4);
-
+  const audios = document.querySelectorAll("audio");
 
   audios.forEach(audio => {
     audio.addEventListener("play", () => {
@@ -119,5 +118,6 @@ function actualizarDiasRestantes() {
       });
     });
   });
-  
+
 });
+
