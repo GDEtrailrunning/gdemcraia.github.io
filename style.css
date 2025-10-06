@@ -1,4 +1,3 @@
-
 /* styles.css */
 
 body {
@@ -99,7 +98,7 @@ h2 {
     margin-block-end: 0.3em;
     margin-inline-start: 25px;
     margin-inline-end: 0px;
-    padding-left: 3em;
+    padding-left: 1em;
     font-family: "Tajawal", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -180,14 +179,13 @@ video {
 }
 
 .sub-container h4 {
-  background-color:  #4b96ebff;
+  background-color: #e2c19a;
   padding: 2em; /* Utiliza em en lugar de píxeles */
   margin: 0; /* Elimina márgenes predeterminados */
   font-family: 'Arial', sans-serif;
   font-size: 1.2em;
   text-align: center;
 }
-
 
 .image-container {
   background-color: #fffdfd;
